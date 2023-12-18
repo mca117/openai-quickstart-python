@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <head>
   <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
 </head>
 
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
+  <img src="{{ url_for('static', filename='logo.png') }}" class="icon" />
   <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
+    <h3>Background</h3>
+    <input type="text" name="background_information" placeholder="Enter background information" required />
+    <br><br>
+    <h3>Call to action</h3>
+    <input type="text" name="call_to_action" placeholder="Enter call to action" required />
+    <br><br>
     <input type="submit" value="Generate names" />
+    {% if result %}
+    <div class="w3-container">
+      <p id="resultText" class="result">{{ result }}</p>
+    </div>
+    {% endif %}
   </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
 </body>
+</html>

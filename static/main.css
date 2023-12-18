@@ -23,23 +23,26 @@ input {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding-top: 60px;
+  background-color: #000435;
+  height: 100vh;
+  margin: 5%;
 }
 .icon {
-  width: 34px;
+  width: 100px;
 }
 h3 {
   font-size: 32px;
   line-height: 40px;
   font-weight: bold;
-  color: #202123;
+  color: #ffffff;
   margin: 16px 0 40px;
 }
 form {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 50%;
 }
 input[type="text"] {
   padding: 12px 16px;
@@ -63,4 +66,12 @@ input[type="submit"] {
 .result {
   font-weight: bold;
   margin-top: 40px;
+  color: white;
+}
+.result-container {
+  border: 3px solid #ccc;
+  padding: 0px;
+  margin-top: 20px;
+  width: fit-content;
+  height: 200px;
 }
