@@ -24,9 +24,7 @@ Sincerely,\n
 [name given]'''
 
 app = Flask(__name__)
-OPENAI_API_KEY = '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'
 openai.api_key = os.getenv("OPENAI_API_KEY")
-print(openai.api_key)
 
 @app.route("/", methods=("GET", "POST"))
 def index():
